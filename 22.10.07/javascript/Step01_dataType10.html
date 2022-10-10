@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript data type</h1>
+
+    <script>
+        /* 
+        function(msg){}
+        에서 msg는 매개 변수이다. 함수에 전달되는 값을 전달 받을 변수이며
+        let을 선언하지 않는다. 매개 변수는 해당 함수 안에서만 사용할 수 있다.
+        */
+       let str="hello";
+       
+       //함수에 전달되는 값을 msg라는 매개변수에 전달받을 준비하기
+       let printMsg=function(msg){
+        // msg에 뭐가 전달되지는 모르겠지만 아래와 같이 사용할거야!
+        console.log("---------");
+        console.log(msg);
+        console.log("---------");
+       };
+       // console.log(msg);
+       //printMsg() 이 중괄호안에 뭔가를 넣어주지 않으면 undefined로 나타난다.
+
+       printMsg("hello");        
+       printMsg("who are you?");
+       printMsg(1117);
+       printMsg(str);    // 위에  let str="hello";가 만들어져 있다.(변수사용가능.)
+       printMsg("bye!");
+    </script>
+</body>
+</html>

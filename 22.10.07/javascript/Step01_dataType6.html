@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript data type</h1>
+     <button onclick="greet()">인사하기</button>
+    <script>
+/*특정 시점에 일괄 실행할 javascript를 미리 준비해 놓기 위해서는 function type data가 필요함*/
+
+
+        //greet 이라는 함수가 만들어진다(페이지 로딩시)
+        //(greet이라는 변수에 function type이 들어간다.)이렇게 볼 수도 있다.
+        function greet(){
+            console.log("안녕하세요");
+        }
+
+        //이름이 없는 함수를 만들어서 greet2라는 변수에 대입하기
+        let greet2 = function(){
+            console.log("안녕하세요2");
+        };
+
+        //화살표 함수를 만들어서 greet3 이라는 변수에 대입하기
+        let greet3 = ()=>{
+            console.log("안녕하세요3");
+        };
+
+        let f1=function(){
+            console.log("하나");
+            console.log("두울");
+            console.log("세엣");
+        };
+        let myName= "김구라";
+        //참조- 콘솔창에 myName을 입력해서 안에 내용을 확인할수 있다.
+        // myName 안에 있는 값을 불러와서 yourName변수에 대입하기
+        let yourName=myName;
+        //f1 안에 있는 값을 불러와서(참조해서) f2함수에 대입하기
+        let f2=f1;
+
+        //f1함수를 호출하고 호출한 해당 위치에 리턴된 값을 result변수에 대입하기.
+        let result=f1();
+        //함수가 call된 후에는 반드시 그 자리가 다른 데이터로 바뀐다. 없으면 undefined으로라도 바뀐다.
+        //result를 콘솔창에 입력시 undefined 확인 가능.
+
+        //변수를 선언만 하고 어떤 값도 넣지 않으면 undefined가 들어 있다.
+        let a;
+        //변수를 선언하고 undefined를 넣을 수도 있다.
+        let b=undefined;
+
+    /*               함수 만드는 3가지 방법                    */
+    //2번째 3번째가 많이 쓰인다.
+    //1번의 자바스크립트 흐름을 거스르는 경향이 있어 잘 안쓰인다.
+    </script>
+    
+</body>
+</html>

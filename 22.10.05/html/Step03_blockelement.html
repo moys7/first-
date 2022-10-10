@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image-panel{
+            border-width: 2px;
+            border-style: solid;
+            border-color:red;
+            border-radius: 10px;
+        }
+        /* 선택자에서 띄어 쓰기를 하면 자손 요소를 의미함.*/
+        image-panel img{/*클래스 속성의 값이 image-panel인 요소의 자손 중에서 img 선택*/
+            width:200px;
+            length:200px;
+        }
+    </style>
+</head>
+<body>
+    <div>div 요소는 문단을 나타낼때 사용합니다.</div>
+    <div>문단에 해당하는 것은 문자일 뿌만아니고 여러가지 요소도 될수 있음</div>
+    <div>div요소는 폭을 100percent 차지하는 block 요소임</div>
+    <!--
+        div 입장에서 img는 자식 (반대로는 부모)
+        img 끼리는 형제 (sbling)
+    -->
+    <div class="image-panel">
+        <img src="html/images/kim1.png" >
+        <img src="html/images/rabbit_1.png" >
+    </div>
+    <div class="image-panel">
+        <img src="html/images/image1.png" >
+        <img src="html/images/image2.png" >
+    </div>
+    <img src="html/images/1.png" >
+</body>
+</html>

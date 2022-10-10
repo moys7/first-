@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> javascript data type </h1>
+    <!--함수를 호출하는 목적
+
+            1. 어떤 동작을 하기 위해
+            2. 어떤 값을 받아오기 위해
+            3. 어떤 동작도하고 동작의 결과갑을 받아오기 위해    -->
+    <script>
+
+        //원숭이를 냉장고에 밀어 넣는 함수
+        let pushMonkey=function(){
+            console.log('냉장고 문을 열어');
+            console.log('원숭이를 넣어');
+            console.log('냉장고를   닫아');
+        };//이내용은 위에 목적중 (어떤동작을 하기위해)1번에 해당한다.
+
+        let getFortune=function(){
+            //어떤 복잡한 과정을 통해 오늘의 운세를 얻어왔다고 가정하자
+            let fortune="동쪽으로 가면 귀인 봄"
+            //returen 이라는 예약어를 이용해서 string type 데이터 함수를 호출한 그 위치로 되돌려 준다.
+            return fortune;
+        };//콘솔창에 alert(getFortune()); 이라치면 함수자리에 undefined가 들어온다.
+
+        // 1. 어떤동작을 하기위한 목적인 함수 호출
+        pushMonkey();
+
+        // 2. 어떤 값을 받아보기 위한 목적인 함수 호출
+        let fortuneToday= getFortune();
+
+        
+/*                    3. 어떤 동작도하고 동작의 결과값을 받아오기 위해            */
+        let isDelete = confirm("삭제할까요?")
+        let yourName = prompt("이름을 입력하세요")
+        //호출창 confirm();을 적용하면 팝업창이 뜨고 확인시 true 취소시 false
+        //이런 코드 유용
+        //confirm("삭제할까요?");
+        //let isDelete=confirm("삭제할께요?");      isDelet로 결과값확인 가능
+
+        //prompt() 팝업창에 텍스트상자를 주고 적은내용을 리턴한다.        
+    
+    </script>
+</body>
+</html>

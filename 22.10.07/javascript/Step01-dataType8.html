@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let getData=function(){
+            //어떤 복잡한 과정을 거쳐서 얻어낸 object라고 가정
+            let obj={num:1, name:"김구라", addr:"노량진"}
+            //리턴 예약어를 이용해서 함수르 호출한 곳으로 object type 돌려주기
+            return obj;
+            //모든타입 들이 다 리턴가능
+        };
+
+        let getFriends=function(){
+            //어떤 복잡한 과정을 거쳐서 얻어낸 array라고 가정
+            let friends=['김구라', '해골', '원숭이', '주뎅이', '덩어리']
+            return friends;
+            //getFriends()[0]으로 안에 내용을 불러올 수 있다.
+            //호출때 마다 새롭게 만들어서 호출된다.
+        };
+
+        let a= getData;// function
+        let b= getData();// object
+        let c= getData().num; //number
+        let d=getData().name; // string
+        let e=getData().adrr;//string
+
+        let f=getFriends()[0]; //string '김구라'
+        let g=getFriends()[1]; //sting
+        let h=getFriends()[2]; //string
+
+
+
+    </script>
+</body>
+</html>

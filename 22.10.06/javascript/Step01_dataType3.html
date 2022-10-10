@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript data type</h1>
+    <script>
+        /* 
+            한명의 회원 정보라고 가정하자
+            
+            번호(number type), 이름(string type), 남자인지 여부(boolean type)
+        */
+        let num=1;
+        let name="김구라";
+        let isMan=true;
+        //하나의 변수명으로 여러개의 값을 한번에 관리할 수는 없을까?
+        //콘솔창에 {a:1, b:"김구라", c:true}
+        //key:value, key:value... 위는 이런형식
+        // let mem= {} 이것도 가능          !!!object type!!!
+
+        let mem1={num:1, name: "김구라", isMan: true}; //object type
+        let mem2={
+            num:1, 
+            name:"김구라", 
+            isMan: true}; //옆으로 적기 힘들면 한줄로.
+        //object의 특정방에 넣을 데이터를 변수명으로 불러와서 넣을 수도 있다.
+        let mem3={ num:num, name:name, isMan:isMan};
+        //위를 줄여서 아래와 같이 object를 만들수도 있다.
+        let mem4={num, name, isMan};
+
+        //a는 object type
+        let a=mem1; // mem1에 있는 object type 값을 a에 복사
+        //b는 number type
+        let b=mem1.num;
+        //c는 string type
+        let c=mem1.name;
+        //d는 boolean type
+        let d=mem1.isMan;
+
+        // object에 저장된 값을 수정해 보기
+        mem2.num=2;
+        mem2.name="해골";
+        mem2.isMan=false;
+
+        let mem5={}; 
+        //빈 object를 만들고 나중에 필요에 따라 방들을 추가 할 수 있다.
+        mem5.num=3;
+        mem5.name="원숭이";
+        mem5.isMan=true;
+    </script>
+</body>
+</html>
