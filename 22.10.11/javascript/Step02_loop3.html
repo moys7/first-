@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let members=[
+            {num:1, name:"김구라", addr:"노량진"},
+            {num:2, name:"해골", addr:"행신동"},
+            {num:3, name:"원숭이", addr:"삼도동"}
+        ];
+
+        for(let i=0; i<members.length; i++){ // 이 내용을 source 에 돌려보면 i=0은 처음 한번만 돌아가는 것을 볼 수 있다.
+
+        //members배열의 i번째 방에 있는 object를 참조해서 tmp변수에 담기
+        let tmp=members[i];
+        console.log("번호:"+tmp.num+"이름:"+tmp.name+"주소"+tmp.addr);
+        }
+
+        //i와 tmp가 콘솔창이다 local 영역에서 만들어 졌다는 것이다.
+    </script>
+</body>
+</html>

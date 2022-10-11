@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+                width: 300px;
+                height: 300px;
+                border: 1px solid red;
+        };
+    </style>
+</head>
+<body>
+    <h1>mouse 이벤트 처리</h1>
+    <div class="box" id="one"></div>
+    <p id="info"></p>
+    <script>
+        document.querySelector("#one").addEventListener("mouseover", function(){
+            document.querySelector("#info").innerText="마우스를 올렸네?"
+        });
+        document.querySelector("#one").addEventListener("mouseout", function(){
+            document.querySelector("#info").innerText="마우스가 나갔네?"
+        });
+    </script>
+    
+</body>
+</html>
