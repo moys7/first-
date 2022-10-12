@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        if~else 문 사용하기
+    </h1>
+    <input type="text" id="inputNum" placeholder="숫자를 입력하세요...">
+    <button id="checkBtn">판별하기</button>
+    <p id="result"></p>
+
+    <script>
+        /*
+        input 요소에 숫자를 입력하고 판별하기 버튼을 누르면
+        입력한 숫자가 양수이면 p요소에 "양수입니다"를 출력하고
+        그렇지 않으면 "양수가 아닙니다"를 출력하기
+        */
+       document.querySelector("#checkBtn").addEventListener("click", function(){
+        //1. 입력한 숫자를 읽어온다.
+            let num = Number(document.querySelector("#inputNum").value);
+
+        //2. 만일 입력한 숫자가 0보다 크면 id가 result 인 요소에 "양수입니다"를 출력하기
+            if (num>0){
+                document.querySelector("#result").innerText="양수입니다";
+            }else{document.querySelector("#result").innerText="양수가 아닙니다";}
+       });
+       //if else 둘중에 하나만 실행된다.
+    </script>
+</body>
+</html>

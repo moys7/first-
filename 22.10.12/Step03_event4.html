@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>이벤트 처리</h1>
+    <div class="box"></div>                        <!--아래 매개변수를 넣으면 object를 얻을 수 있다. 콘솔창에서 확인-->
+    <script>                                                                 //  매개변수
+        document.querySelector(".box").addEventListener("mousemove", function(event){
+            console.log("mousemove!");
+            //함수에 선언한 매개 변수에 전달되는 값을 콘소에 출려해서 무엇인지 구조를 관찰해 보자
+            console.log(event);
+            //방금일어난 모든일에 대한게 오브젝트에 적혀있다.
+
+            //이벤트가 일어난 곳의 좌표
+            let x=event.offsetX;
+            let y=event.offsetY;
+            //div의 innerText에 출력해보기
+            this.innerText="x:"+x+"y:"+y
+        });
+        //div의 innerText에 출력해보기
+        //this.innerText="x:"+x+"y"+y;
+        //event.target.innerText="x:"+x+"y:"+y;
+        //document.querySelector(".box").innerText="x:"+x+"y:"+y;
+
+        //함수를 호출하면서 함수를 전달하는 또 다른 예제
+        let names=["김구라","해골","원숭이"];
+
+        //배열은 forEach()라는 함수도 가지고 있다.
+        names.forEach(function(a){
+            console.log(a);
+        });
+
+        names.forEach(function(item, index){
+            console.log(item+"|"+index);
+        });                //이건 백스페이스 아래 타이핑(파이프 문자)
+
+
+    </script>
+</body>
+</html>

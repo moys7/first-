@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>if문 테스트</h1>
+    <button id="actionBtn">동작하기</button>
+    <p id="info"></p>
+    <script>
+
+    
+
+        document.querySelector("#actionBtn").addEventListener("click",function(){
+            let isHungry=confirm("배가 고프면 확인, 아니면 취소를 누르세요.");
+
+            if(isHungry==true){
+            document.querySelector("#info").innerText="식사하세요";
+            document.querySelector("#info").style.color="green";
+            document.querySelector("#info").style.backgroundColor="yellow";
+        };
+
+        if(isHungry){
+            document.querySelector("#info").style.fontSize="30px";
+        };
+        })
+        //confirm 리턴되는 값을 받을 수 있는데 그 값을 찾으려면 콘솔창에 검색할 수 있는 변수를 만들자 
+
+        //만일 isHungry가 true와 같다면(이즈헝그리 안에 트루가 들어있다면)
+    </script>
+</body>
+</html>
