@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myBtn">눌러봐</button>
+    <p id="result"></p>
+
+    <select name="" id="mySelect">
+        <option>선택</option>
+        <option>가위</option>
+        <option>바위</option>
+        <option>보</option>
+    </select>
+
+    <script>
+        /*
+            버튼을 눌렀을때 아래 배열에 있는 3개의 문자열 중에 하나가 랜덤하게 
+            p요소의 innerText로 출력 되도록 해보세요.
+        */
+
+        const data=["가위", "바위", "보"];
+
+        document.querySelector("#myBtn").addEventListener("click",function(){
+                let num=Math.floor(Math.random()*3);
+                //가위 바위 보 중에 하나의 문자열을 innerText로 출력하기
+                document.querySelector("#result").innerText=data[num];
+                // 가위 바위 보 중에 하나의 문자열을 select의 value로 넣어주기
+                document.querySelector("#mySelect").value=data[num];
+        });
+         
+    </script>
+</body>
+</html>

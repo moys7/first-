@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>문서 객체 동적으로 만들기</h1>
+    <button id="addImage">이미지 추가하기</button>
+    <div id="wrapper">
+        <img src="images/kim1.png" alt="김구라 이미지">
+    
+    </div>
+    <script>
+        document.querySelector("#addImage").addEventListener("click", function(){
+            //요소를 만들어서 참조값을 a에 담기
+            const a=document.createElement("img");
+            //src 속성 추가하기
+            a.setAttribute("src", "images/kim1.png");
+            //alt 속성 추가하기
+            a.setAttribute("alt", "김구라 이미지");
+            //id가 wrapper인 요소에 img 요소를 추가하기
+            document.querySelector("#wrapper").append(a);
+        });
+    </script>
+</body>
+</html>

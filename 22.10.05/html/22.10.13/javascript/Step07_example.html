@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kimImg{
+            /*왼쪽마진이 변경될때 1초동안 변경되도록 하고 끝지점에서는 부드럽게 마무리*/
+            transition: margin-left 1s ease-out;
+            /*아래3줄을 3줄로 요약가능
+            transition-property: margin-left;
+            transition-duration: 1s;        (0.5초도 가능)
+            transition-timing-function: ease-out;
+            순서는 상관이 없다.*/
+            
+        }
+    </style>
+</head>
+<body>
+    <button id="moveRight">우축으로 움직이기</button>
+    <button id="moveLeft">좌측으로 움직이기</button>
+    <br>
+    <img src="images/kim1.png" id="kimImg">
+    <script>
+        //page로딩 시점에 num이라는 변수를 만들고 초기값 0에 대입
+         let num=0;
+        
+        document.querySelector("#moveRight").addEventListener("click", function(){
+            //함수 안에서 함수 바깥쪽에 정의된 변수를 참조할 수 있다.
+            //global 영역에서 만들어진 것은 남아있고
+            //local은 늘 새롭게 만들어진다.
+            num +=100; //num=num+100;
+            document.querySelector("#kimImg").style.marginLeft= num+"px";
+        });
+
+        document.querySelector("#moveLeft").addEventListener("click", function(){
+            num -= 100; //num=num-100;
+            document.querySelector("#kimImg").style.marginLeft= num+"px";
+        });
+    </script>
+</body>
+</html>
