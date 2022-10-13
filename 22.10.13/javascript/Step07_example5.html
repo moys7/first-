@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        수학에 관련된 함수 사용해 보기
+    </h1>
+    <script>
+        //sin30,tan45,cos60 등 삼각함수의 값을 얻어내기
+        let result=Math.sin(30*Math.PI/180); //sin 30도
+        let result1=Math.tan(45*Math.PI/180); //tan 45도
+        // 무작위의 랜덤한 숫자 얻어내기
+        let ranNum=Math.random(); //0이상 1미만의 랜덤한 실수 얻기
+        let ranNum2=Math.random()*10;//0이상 10미만의 랜덤한 실수 얻기
+
+        // 반올림하기, 내림하기, 올림하기
+        let result3=Math.round(10.5); // 반올림값 10
+        let result4=Math.floor(5.6); // 내림값 5
+        let result5=Math.ceil(3.1); // 올림값 4
+
+        let ranNum3=Math.floor(Math.random()*10); // 0~9사이의 랜덤한 정수
+        let ranNum4=Math.floor(Math.random()*10)+1; // 1~10사이의 랜덤한 정수
+        let ranNum5=Math.floor(Math.random()*45)+1; //1~45사이의 랜덤한 정수
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="changeBtn">하나씩 바꾸기</button>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+    <div>div6</div>
+    <div>div7</div>
+    <div>div8</div>
+    <div>div9</div>
+    <div>div10</div>
+    <script>
+        /*
+            1.바꾸기 버튼을 누르면 위에서 부터 순서대로 한번에 하나씩 div의
+            innerText 가 "김구라"로 변경되도록 해보세요.
+            2. div10까지 모두 바뀐후에 버튼을 또 누르면 "더 이상 바꿀수 없습니다." 라는
+            알림을 띄어보세요
+        */
+
+        //배열의 인덱스로 사용할 변수를 만들고 초기값 0 대입
+        let index=0;
+
+        document.querySelector("#changeBtn").addEventListener("click", function(){
+            //만일 현재 index가 10(배열의 size)과 같다면
+            //알림을 띄우고 아래의 코드르 실행하지 않기(함수르 여기서 종료시키기)
+            if(index==10){
+                alert("더 이상 바꿀수 없습니다.");
+                return;            
+            }
+            
+
+            let divs=document.querySelectorAll("div");
+            //index 변수에 있는 값을 이용해서 배열의 특정방 참조해서 innerText 수정하기
+            divs[index].innerText="김구라";
+            //index 1증가 시키기
+            index++;
+        })
+
+
+        
+        
+    </script>
+</body>
+</html>

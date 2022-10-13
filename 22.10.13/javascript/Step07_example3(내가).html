@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="changeBtn">하나씩 바꾸기</button>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+    <div>div6</div>
+    <div>div7</div>
+    <div>div8</div>
+    <div>div9</div>
+    <div>div10</div>
+    <script>
+        //1.바꾸기 버튼을 누르면 위에서 부터 순서대로 한번에 하나씩 div의
+        //innerText 가 "김구라"로 변경되도록 해보세요.
+        i=-1
+        document.querySelector("#changeBtn").addEventListener("click",function(){
+            const a= document.querySelectorAll("div");
+            i+=1;
+            if(i==10){alert("더 이상 바꿀수 없습니다.")};
+            // 2번문제 아랫 줄보다 아래에 있으면 i가 10이 되었을 땐 아래 줄이 작동이 안되기에 function이 멈춘다.
+            a[i].innerText="김구라";
+        
+        });
+        //2. div10까지 모두 바뀐후에 버튼을 또 누르면 "더 이상 바꿀수 없습니다." 라는
+        //알림을 띄어보세요
+
+
+
+        
+        
+    </script>
+</body>
+</html>
