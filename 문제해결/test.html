@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="one" placeholder="메세지 입력">
+    <button id="sendBtn">전송</button>
+    <p id="result"></p>
+    <script>       
+        /*const a=document.querySelector("#one").value;
+        상수가 함수 밖으로 나오면 global 영역이기에 페이지 로딩시 만들어져서
+        아무값도 없는 상태로 만들어진다. 클릭하는 순간에 적힌 값을 a가 받으려면 
+        함수 안으로 들어가야 된다.*/
+        document.querySelector("#sendBtn").addEventListener("click", function(){
+            const a=document.querySelector("#one").value;
+            document.querySelector("#result").innerText=a;
+        });
+    </script>
+    
+</body>
+</html>
